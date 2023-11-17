@@ -1,0 +1,58 @@
+{
+  "choices": [
+    {
+      "id": "24266952-d1fe-434f-9ae5-38b844cfac0c",
+      "name": "Demo",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "fe8ed412-a745-4452-b93d-e3d8bf28f30b",
+          "name": "Move Current Note to Folder",
+          "type": "Macro",
+          "command": true,
+          "macroId": "1f283a68-bafb-4889-8f76-579805322ccb"
+        }
+      ],
+      "collapsed": true
+    }
+  ],
+  "macros": [
+    {
+      "name": "Move Current Note to Folder",
+      "id": "1f283a68-bafb-4889-8f76-579805322ccb",
+      "commands": [
+        {
+          "name": "move-current-note-to-folder",
+          "type": "UserScript",
+          "id": "b4a4a63d-f41f-4b61-8f07-39ccdb001b58",
+          "path": "script/move-current-note-to-folder.js",
+          "settings": {
+            "Folder Path": "demo/move-current-note-to-folder/target"
+          }
+        }
+      ],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "single-line",
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": true,
+  "version": "1.6.0",
+  "disableOnlineFeatures": true,
+  "ai": {
+    "OpenAIApiKey": "",
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true
+  }
+}
